@@ -1,5 +1,5 @@
-#define BTN_PIN 9 // for interrupt
-#define PIR_PIN 10 // for interrupt
+#define BTN_PIN 9 
+#define PIR_PIN 10
 #define LED_PIN 11
 
 bool ledState = false; 
@@ -19,7 +19,6 @@ void MotionInterrupt() {
 }
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600); 
 
   pinMode(BTN_PIN, INPUT_PULLUP);
@@ -32,6 +31,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // put your main code here, to run repeatedly;
 
 }
