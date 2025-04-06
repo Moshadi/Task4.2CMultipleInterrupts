@@ -1,5 +1,5 @@
-#define BTN_PIN 9 // for interrupt
-#define PIR_PIN 10 // for interrupt
+#define BTN_PIN 9 
+#define PIR_PIN 10
 #define LED_PIN 11
 
 bool ledState = false; 
@@ -9,7 +9,6 @@ void ButtonInterrupt() {
   ledState = !ledState; 
   digitalWrite(LED_PIN, ledState);
   Serial.println("ButtonInterrution");
-
 }
 
 void MotionInterrupt() {
@@ -19,7 +18,6 @@ void MotionInterrupt() {
 }
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600); 
 
   pinMode(BTN_PIN, INPUT_PULLUP);
@@ -28,7 +26,6 @@ void setup() {
 
   attachInterrupt(digitalPinToInterrupt(BTN_PIN), ButtonInterrupt, FALLING);
   attachInterrupt(digitalPinToInterrupt(PIR_PIN), MotionInterrupt, RISING);
-
 }
 
 void loop() {
